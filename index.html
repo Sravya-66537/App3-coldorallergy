@@ -52,7 +52,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-        }
+        } 
+
+	// this next function made to calculate and display results on the results page
+	
+	function showResults(){
+		var total = cold_count + allergy_count;
+		var allergy_percent = allergy_count/total;
+		var cold_percent = cold_count/total;
+		var paragraph = document.getElementById("res");
+		var text = "Possibility of Allergies is: " + allergy_percent + "%"<br>"Possibility of Cold is: " + cold_percent + "%"<br>;
+		paragraph.innerHTML = text;
+	}
 
   </script>
 
@@ -155,8 +166,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic</a> 
 		
 	</div>
-</div>
+</div> 
 
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Ready to see your results?</h1>
+	</div>
+	
+	<div id="content" class="w3-container"> 
+		 <a href="#six" onclick="showResults();" class="w3-btn w3-black"> Results</a>
+		
+	</div>
+</div> 
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results:</h1>
+	</div>
+	
+	<div id="content" class="w3-container"> 
+		 <p id="res"></p> 
+
+	<!-- print results on this page -->
+	
+	</div>
+</div> 
+	
 <!-- 
 	I previously wrote my comments in the HTML sections as if it was JavaScript (I didnt realize the commenting was different!)
 	I wrote them as // first, then changed it to /* text */, but the comments were still being shown in my app!
