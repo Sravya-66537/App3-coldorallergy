@@ -114,10 +114,49 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+	<div id="content" class="w3-container"> 
+		/* Changing "Content of page 2 goes here." to the second question: "Do you have a fever?" */
+		<p>Do you have a fever?</p> 
+		/* Added button for "Yes" to take user to pg 3, while adding 1 point to Cold. */
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> 
+		/* Added button for "No" to take user to pg 3, while adding 1 point to Allergy. */
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> 
+		
 	</div>
 </div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container"> 
+		/* Adding title for question three: "Do you have a sore throat?" */
+		<p>Do you have a sore throat?</p> 
+		/* Added button for "Yes" to take user to pg 4, while adding 1 point to Cold. */
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> 
+		/* Added button for "No" to take user to pg 4, while adding 1 point to Allergy. */
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> 
+		
+	</div>
+</div>	
+
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container"> 
+		/* Adding title for question four: "Are your symptoms seasonal or chronic?" */
+		<p>Are your symptoms seasonal or chronic?</p> 
+		/* Added button for "Seasonal" to take user to pg 5, while adding 1 point to Allergy */
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a> 
+		/* Added button for "Chronic" to take user to pg 5, while adding 1 point to Cold. */
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic</a> 
+		
+	</div>
+</div>
+
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
