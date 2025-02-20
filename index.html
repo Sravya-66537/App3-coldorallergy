@@ -63,7 +63,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var resultText = document.getElementById("res");
 		// var text = "Possibility of Allergies is: " + allergy_percent + "%"<br>"Possibility of Cold is: " + cold_percent + "%"<br>;
 		// Results were not printing on results page, so I tried another way to hopefully display results, thus turning the above line into a comment.
-		resultText.innerHTML = "Possibility of Allergies is: " + allergy_percent + "%"<br>"Possibility of Cold is: " + cold_percent + "%"<br>;;
+		resultText.innerHTML = "Possibility of Allergies is: " + allergy_percent*100 + "%"<br>"Possibility of Cold is: " + cold_percent*100 + "%"<br>;;
 	}
 
   </script>
@@ -190,7 +190,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> 
 		 <p id="res"></p> 
 
-	<!-- print results on this page -->
+	<!-- display results on this page -->
 	
 	</div>
 </div> 
