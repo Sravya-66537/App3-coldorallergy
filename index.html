@@ -100,11 +100,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container"> 
-		/* Changing "Put Question 1 content here." to the first question: "Are your eyes watery or itchy?" */
+		<!-- Changing "Put Question 1 content here." to the first question: "Are your eyes watery or itchy?" -->
         	<p>Are your eyes watery or itchy?</p>  
-		/* Added button for "Yes" to take user to pg 2, while adding 1 point to Allergy. */
+		<!-- Added button for "Yes" to take user to pg 2, while adding 1 point to Allergy. -->
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		/* Added button for "No" to take user to pg 2, while adding 1 point to Cold. */
+		<!-- Added button for "No" to take user to pg 2, while adding 1 point to Cold. -->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
     	</div>
 </div>
@@ -115,11 +115,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> 
-		/* Changing "Content of page 2 goes here." to the second question: "Do you have a fever?" */
+		<!-- Changing "Content of page 2 goes here." to the second question: "Do you have a fever?" -->
 		<p>Do you have a fever?</p> 
-		/* Added button for "Yes" to take user to pg 3, while adding 1 point to Cold. */
+		<!-- Added button for "Yes" to take user to pg 3, while adding 1 point to Cold. -->
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> 
-		/* Added button for "No" to take user to pg 3, while adding 1 point to Allergy. */
+		<!-- Added button for "No" to take user to pg 3, while adding 1 point to Allergy. -->
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> 
 		
 	</div>
@@ -131,11 +131,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> 
-		/* Adding title for question three: "Do you have a sore throat?" */
+		<!-- Adding title for question three: "Do you have a sore throat?" -->
 		<p>Do you have a sore throat?</p> 
-		/* Added button for "Yes" to take user to pg 4, while adding 1 point to Cold. */
+		<!-- Added button for "Yes" to take user to pg 4, while adding 1 point to Cold. -->
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> 
-		/* Added button for "No" to take user to pg 4, while adding 1 point to Allergy. */
+		<!-- Added button for "No" to take user to pg 4, while adding 1 point to Allergy. -->
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> 
 		
 	</div>
@@ -147,16 +147,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> 
-		/* Adding title for question four: "Are your symptoms seasonal or chronic?" */
+		<!-- Adding title for question four: "Are your symptoms seasonal or chronic?" -->
 		<p>Are your symptoms seasonal or chronic?</p> 
-		/* Added button for "Seasonal" to take user to pg 5, while adding 1 point to Allergy */
+		<!-- Added button for "Seasonal" to take user to pg 5, while adding 1 point to Allergy -->
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a> 
-		/* Added button for "Chronic" to take user to pg 5, while adding 1 point to Cold. */
+		<!-- Added button for "Chronic" to take user to pg 5, while adding 1 point to Cold. -->
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic</a> 
 		
 	</div>
 </div>
 
+<!-- 
+	I previously wrote my comments in the HTML sections as if it was JavaScript (I didnt realize the commenting was different!)
+	I wrote them as // first, then changed it to /* text */, but the comments were still being shown in my app!
+	I looked over the app instructions and realized I was using the wrong type of commenting, so I went back and changed this in questions 1-4.
+-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
