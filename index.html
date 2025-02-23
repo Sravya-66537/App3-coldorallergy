@@ -46,8 +46,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
         }
 
         function coldAdd(){
@@ -60,10 +58,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var total = cold_count + allergy_count;
 		var allergy_percent = allergy_count/total;
 		var cold_percent = cold_count/total;
-		var resultText = document.getElementById("six");
-		// var text = "Possibility of Allergies is: " + allergy_percent + "%"<br>"Possibility of Cold is: " + cold_percent + "%"<br>;
-		// Results were not printing on results page, so I tried another way to hopefully display results, thus turning the above line into a comment.
-		return resultText.innerHTML = "Possibility of Allergies is: " + allergy_percent*100 + "%"<br>"Possibility of Cold is: " + cold_percent*100 + "%"<br>;;
+		
+		var para=document.getElementById("res");
+		// Fixed errors in code; <br> has to be inside quotes in Javascript for results to be displayed on pg 6
+		resultText = "Possibility of Allergies is: " + allergy_percent*100 + "%<br> Possibility of Cold is: " + cold_percent*100 + "%<br>"
+		para.innerHTML=resultText;
+		return resultText;
 	}
 
   </script>
@@ -177,7 +177,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> 
 		<p>   </p><br>
 		<!-- adding this blank space just for aesthetics! -->
-		 <a href="#six" onclick="showResults();" class="w3-btn w3-black"> Results</a>
+		<a href="#six" onclick="showResults();" class="w3-btn w3-black"> Results</a>
 		
 	</div>
 </div> 
@@ -188,12 +188,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container"> 
-		<p id="res">showResults();</p> 
-
-	<!-- display results on this page -->
-	
+		<p id="res"></p> 
+		<!-- display results on this page -->
 	</div>
 </div> 
+
 	
 <!-- 
 	I previously wrote my comments in the HTML sections as if it was JavaScript (I didnt realize the commenting was different!)
